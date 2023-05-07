@@ -441,10 +441,10 @@ public class WWindowPeer extends WPanelPeer implements WindowPeer,
             minimumSize = ((Component)target).getMinimumSize();
         }
         if (minimumSize != null) {
-            Dimension sysMin = toUserSpace(getGraphicsConfiguration(),
-                                           getSysMinWidth(), getSysMinHeight());
-            setMinSize(Math.max(minimumSize.width, sysMin.width),
-                       Math.max(minimumSize.height, sysMin.height));
+            //Dimension sysMin = toUserSpace(getGraphicsConfiguration(),
+            //                               getSysMinWidth(), getSysMinHeight());
+            setMinSize(Math.max(minimumSize.width, getSysMinWidth()),
+                       Math.max(minimumSize.height, getSysMinHeight()));
         } else {
             setMinSize(0, 0);
         }
